@@ -1,144 +1,162 @@
+<?php
+// VIVAHVISTA - Indian Destination Wedding Website
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
 
-<title>VIVAHVISTA | Destination Weddings</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-<script src="https://cdn.tailwindcss.com"></script>
+    <title>VIVAHVISTA | Where Destinations Meet Forever</title>
 
-<style>
+    <script src="https://cdn.tailwindcss.com"></script>
 
-html {
-    scroll-behavior: smooth;
-}
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
 
-.hero-img {
-    transition: opacity 0.6s ease-in-out,
-                transform 6s ease;
-}
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
 
-.glass {
-    background: rgba(40, 10, 28, 0.72);
-    backdrop-filter: blur(12px);
-}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
 
-.destination-card,
-.moment-card,
-.package-card {
-    transition: 0.4s;
-}
+    <style>
 
-.destination-card:hover,
-.moment-card:hover,
-.package-card:hover {
-    transform: translateY(-8px);
-}
+        * {
+            scroll-behavior: smooth;
+        }
 
-</style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fffaf5;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-image {
+            transition: opacity 0.7s ease;
+        }
+
+        .destination-card,
+        .moment-card {
+            transition: all 0.35s ease;
+        }
+
+        .destination-card:hover,
+        .moment-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .gold-line {
+            width: 80px;
+            height: 3px;
+            background: #d4a017;
+            margin: 18px auto;
+        }
+
+        .glass {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+        }
+
+    </style>
 
 </head>
 
 
-<body class="bg-[#fff8ed] text-gray-800">
+<body>
 
 
 <!-- =====================================================
      NAVBAR
 ===================================================== -->
 
-<nav class="fixed top-0 left-0 w-full z-50 glass text-white">
+<header class="fixed top-0 left-0 right-0 z-50">
 
-<div class="max-w-7xl mx-auto px-6 py-4
-            flex items-center justify-between">
+    <nav class="bg-black/60 backdrop-blur-md
+                border-b border-white/10">
+
+        <div class="max-w-7xl mx-auto
+                    px-6 py-4
+                    flex items-center
+                    justify-between">
+
+            <a href="#home"
+               class="text-white">
+
+                <div class="text-2xl md:text-3xl
+                            serif font-bold
+                            tracking-wide">
+
+                    VIVAH<span class="text-yellow-400">VISTA</span>
+
+                </div>
+
+                <div class="text-[9px]
+                            tracking-[3px]
+                            text-gray-300">
+
+                    WHERE DESTINATIONS MEET FOREVER
+
+                </div>
+
+            </a>
 
 
-<div>
+            <div class="hidden md:flex
+                        items-center gap-8
+                        text-white text-sm">
 
-<h1 class="text-2xl md:text-3xl
-           font-bold tracking-widest
-           text-yellow-300">
+                <a href="#home"
+                   class="hover:text-yellow-400">
+                    Home
+                </a>
 
-VIVAHVISTA
+                <a href="#destinations"
+                   class="hover:text-yellow-400">
+                    Destinations
+                </a>
 
-</h1>
+                <a href="#moments"
+                   class="hover:text-yellow-400">
+                    Wedding Moments
+                </a>
 
-<p class="text-[10px] md:text-xs
-          tracking-[4px]">
+                <a href="#packages"
+                   class="hover:text-yellow-400">
+                    Packages
+                </a>
 
-WHERE DESTINATIONS MEET FOREVER
+                <a href="#about"
+                   class="hover:text-yellow-400">
+                    About
+                </a>
 
-</p>
+                <a href="booking.php"
+                   class="bg-yellow-400
+                          text-black
+                          px-5 py-2
+                          rounded-full
+                          font-semibold">
 
-</div>
+                    Plan Your Wedding
 
+                </a>
 
-<div class="hidden lg:flex
-            items-center gap-7
-            font-medium">
+            </div>
 
-<a href="index.php"
-   class="hover:text-yellow-300">
+        </div>
 
-Home
+    </nav>
 
-</a>
-
-<a href="#destinations"
-   class="hover:text-yellow-300">
-
-Destinations
-
-</a>
-
-<a href="#moments"
-   class="hover:text-yellow-300">
-
-Wedding Moments
-
-</a>
-
-<a href="#packages"
-   class="hover:text-yellow-300">
-
-Packages
-
-</a>
-
-<a href="#about"
-   class="hover:text-yellow-300">
-
-About
-
-</a>
-
-<a href="contact.php"
-   class="hover:text-yellow-300">
-
-Contact
-
-</a>
-
-<a href="booking.php"
-   class="bg-yellow-400
-          text-black
-          px-5 py-2
-          rounded-full
-          font-bold
-          hover:bg-yellow-300">
-
-Plan Your Wedding
-
-</a>
-
-</div>
-
-</div>
-
-</nav>
+</header>
 
 
 
@@ -146,211 +164,242 @@ Plan Your Wedding
      HERO
 ===================================================== -->
 
-<section class="relative
-                h-screen
-                min-h-[680px]
+<section id="home"
+         class="relative h-screen
+                min-h-[700px]
                 overflow-hidden">
 
+    <img id="heroImage"
 
-<img id="heroImage"
+         src="https://images.pexels.com/photos/21008995/pexels-photo-21008995.jpeg?auto=compress&cs=tinysrgb&w=2000"
 
-     src="https://images.pexels.com/photos/36098389/pexels-photo-36098389.jpeg?auto=compress&cs=tinysrgb&w=2000"
+         alt="Maharashtrian Indian Wedding Couple"
 
-     class="hero-img
-            absolute inset-0
-            w-full h-full
-            object-cover"
+         class="hero-image absolute
+                inset-0
+                w-full h-full
+                object-cover">
 
-     alt="Indian Bride and Groom">
 
+    <div class="absolute inset-0
+                bg-gradient-to-r
+                from-black/85
+                via-black/55
+                to-black/20">
+    </div>
 
-<!-- DARK OVERLAY -->
 
-<div class="absolute inset-0
-            bg-gradient-to-r
-            from-black/80
-            via-black/50
-            to-black/20">
-</div>
+    <div class="relative z-10
+                h-full
+                flex items-center">
 
+        <div class="max-w-7xl
+                    mx-auto
+                    px-6
+                    w-full">
 
-<!-- HERO CONTENT -->
+            <div class="max-w-3xl
+                        text-white
+                        pt-20">
 
-<div class="relative z-10
-            h-full
-            flex items-center">
+                <p class="text-yellow-300
+                          font-semibold
+                          tracking-[4px]
+                          text-sm md:text-base">
 
-<div class="max-w-7xl
-            mx-auto
-            px-6
-            w-full">
+                    MAHARASHTRIAN DESTINATION WEDDINGS
 
-<div class="max-w-3xl
-            text-white">
+                </p>
 
 
-<p class="text-yellow-300
-          font-semibold
-          tracking-[4px]
-          mb-5">
+                <h1 class="serif
+                           text-5xl
+                           md:text-7xl
+                           font-bold
+                           leading-tight
+                           mt-5">
 
-INDIAN DESTINATION WEDDINGS
+                    Where Love Meets
 
-</p>
+                    <span class="text-yellow-300">
+                        Tradition
+                    </span>
 
+                </h1>
 
-<h2 class="text-5xl
-           md:text-7xl
-           font-serif
-           font-bold
-           leading-tight">
 
-Your Dream Wedding
+                <p class="text-gray-200
+                          text-lg
+                          md:text-xl
+                          mt-6
+                          leading-relaxed">
 
-<br>
+                    Experience the beauty of
+                    Maharashtrian traditions,
+                    royal destinations and
+                    unforgettable wedding celebrations.
 
-<span class="text-yellow-300">
+                </p>
 
-in Beautiful Destinations
 
-</span>
+                <div class="flex flex-wrap
+                            gap-4
+                            mt-9">
 
-</h2>
+                    <a href="#destinations"
+                       class="bg-yellow-400
+                              hover:bg-yellow-300
+                              text-black
+                              px-7 py-3
+                              rounded-full
+                              font-semibold">
 
+                        Explore Destinations →
 
-<p class="text-lg
-          md:text-xl
-          text-gray-200
-          mt-7
-          max-w-2xl">
+                    </a>
 
-Celebrate Indian traditions,
-beautiful venues and unforgettable
-moments at destinations made
-for your special day.
 
-</p>
+                    <a href="booking.php"
+                       class="border border-white
+                              hover:bg-white
+                              hover:text-black
+                              px-7 py-3
+                              rounded-full
+                              font-semibold">
 
+                        Plan Your Wedding
 
-<div class="flex flex-wrap
-            gap-4 mt-9">
+                    </a>
 
+                </div>
 
-<a href="#destinations"
-   class="bg-yellow-400
-          text-black
-          px-7 py-3
-          rounded-full
-          font-bold
-          hover:bg-yellow-300">
+            </div>
 
-Explore Destinations →
+        </div>
 
-</a>
+    </div>
 
 
-<a href="booking.php"
-   class="border border-white
-          px-7 py-3
-          rounded-full
-          hover:bg-white
-          hover:text-black">
+    <!-- Slider Buttons -->
 
-Plan Your Wedding
+    <button onclick="previousSlide()"
+            class="absolute
+                   left-5
+                   top-1/2
+                   -translate-y-1/2
+                   z-20
+                   w-12 h-12
+                   rounded-full
+                   bg-black/50
+                   hover:bg-black/70
+                   text-white
+                   text-3xl">
 
-</a>
+        ‹
 
+    </button>
 
-</div>
 
-</div>
+    <button onclick="nextSlide()"
+            class="absolute
+                   right-5
+                   top-1/2
+                   -translate-y-1/2
+                   z-20
+                   w-12 h-12
+                   rounded-full
+                   bg-black/50
+                   hover:bg-black/70
+                   text-white
+                   text-3xl">
 
-</div>
+        ›
 
-</div>
+    </button>
 
 
+    <!-- Slider Dots -->
 
-<!-- PREVIOUS -->
+    <div class="absolute
+                bottom-8
+                left-1/2
+                -translate-x-1/2
+                z-20
+                flex gap-3">
 
-<button onclick="previousSlide()"
+        <button class="dot
+                       w-3 h-3
+                       rounded-full
+                       bg-white">
+        </button>
 
-        class="absolute
-               left-5
-               top-1/2
-               -translate-y-1/2
-               z-20
-               w-12 h-12
-               rounded-full
-               bg-black/50
-               text-white
-               text-3xl
-               hover:bg-black/80">
+        <button class="dot
+                       w-3 h-3
+                       rounded-full
+                       bg-white/50">
+        </button>
 
-‹
+        <button class="dot
+                       w-3 h-3
+                       rounded-full
+                       bg-white/50">
+        </button>
 
-</button>
+        <button class="dot
+                       w-3 h-3
+                       rounded-full
+                       bg-white/50">
+        </button>
 
+    </div>
 
-<!-- NEXT -->
+</section>
 
-<button onclick="nextSlide()"
 
-        class="absolute
-               right-5
-               top-1/2
-               -translate-y-1/2
-               z-20
-               w-12 h-12
-               rounded-full
-               bg-black/50
-               text-white
-               text-3xl
-               hover:bg-black/80">
 
-›
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
-</button>
+<section class="py-20 px-6">
 
+    <div class="max-w-4xl mx-auto
+                text-center">
 
-<!-- DOTS -->
+        <p class="text-yellow-600
+                  font-semibold
+                  tracking-[3px]">
 
-<div class="absolute
-            bottom-8
-            left-1/2
-            -translate-x-1/2
-            z-20
-            flex gap-3">
+            VIVAHVISTA
 
-<span class="dot w-3 h-3
-             rounded-full
-             bg-white
-             cursor-pointer"
-      onclick="changeSlide(0)">
-</span>
+        </p>
 
-<span class="dot w-3 h-3
-             rounded-full
-             bg-white/50
-             cursor-pointer"
-      onclick="changeSlide(1)">
-</span>
+        <h2 class="serif
+                   text-4xl md:text-5xl
+                   font-bold
+                   text-gray-900
+                   mt-3">
 
-<span class="dot w-3 h-3
-             rounded-full
-             bg-white/50
-             cursor-pointer"
-      onclick="changeSlide(2)">
-</span>
+            Your Dream Wedding,
+            Your Perfect Destination
 
-<span class="dot w-3 h-3
-             rounded-full
-             bg-white/50
-             cursor-pointer"
-      onclick="changeSlide(3)">
-</span>
+        </h2>
 
-</div>
+        <div class="gold-line"></div>
+
+        <p class="text-gray-600
+                  leading-8
+                  mt-6">
+
+            From royal palaces to peaceful beaches,
+            VIVAHVISTA brings together beautiful
+            Indian wedding destinations where
+            tradition, luxury and celebration
+            come together.
+
+        </p>
+
+    </div>
 
 </section>
 
@@ -362,286 +411,238 @@ Plan Your Wedding
 
 <section id="destinations"
          class="py-20
-                bg-[#fff8ed]">
+                bg-white
+                px-6">
 
-<div class="max-w-7xl
-            mx-auto px-6">
+    <div class="max-w-7xl mx-auto">
 
+        <div class="text-center mb-12">
 
-<div class="text-center">
+            <p class="text-yellow-600
+                      font-semibold
+                      tracking-[3px]">
 
-<p class="text-[#a33a5e]
-          font-semibold
-          tracking-[4px]">
+                FIND YOUR PERFECT VENUE
 
-DISCOVER BEAUTIFUL PLACES
+            </p>
 
-</p>
+            <h2 class="serif
+                       text-4xl md:text-5xl
+                       font-bold
+                       mt-3">
 
+                Wedding Destinations
 
-<h2 class="text-4xl
-           md:text-5xl
-           font-bold
-           text-[#681b40]
-           mt-3">
+            </h2>
 
-Wedding Destinations
+            <div class="gold-line"></div>
 
-</h2>
+        </div>
 
 
-<p class="text-gray-600
-          mt-4
-          max-w-2xl
-          mx-auto">
+        <div class="grid
+                    sm:grid-cols-2
+                    lg:grid-cols-5
+                    gap-6">
 
-From royal palaces to beach resorts,
-find a destination that makes
-your celebration unforgettable.
 
-</p>
+            <!-- BEACH -->
 
-</div>
+            <div class="destination-card
+                        relative
+                        h-80
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-xl">
 
+                <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85"
+                     class="w-full h-full object-cover"
+                     alt="Beach Wedding">
 
+                <div class="absolute inset-0
+                            bg-black/40">
+                </div>
 
-<div class="grid
-            md:grid-cols-2
-            lg:grid-cols-4
-            gap-6
-            mt-12">
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            text-white">
 
+                    <h3 class="serif
+                               text-2xl
+                               font-bold">
 
-<!-- ROYAL -->
+                        Beach
 
-<div class="destination-card
-            relative
-            h-96
-            rounded-3xl
-            overflow-hidden
-            shadow-xl">
+                    </h3>
 
-<img src="https://images.pexels.com/photos/33318112/pexels-photo-33318112.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                    <p class="text-sm">
+                        Sunset celebrations
+                    </p>
 
-     class="w-full h-full
-            object-cover"
+                </div>
 
-     alt="Royal Indian Wedding">
+            </div>
 
 
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/85
-            via-black/20
-            to-transparent">
-</div>
+            <!-- PALACE -->
 
+            <div class="destination-card
+                        relative
+                        h-80
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-xl">
 
-<div class="absolute
-            bottom-6
-            left-6
-            text-white">
+                <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=900&q=85"
+                     class="w-full h-full object-cover"
+                     alt="Royal Palace Wedding">
 
-<p class="text-yellow-300
-          text-sm
-          tracking-widest">
+                <div class="absolute inset-0
+                            bg-black/40">
+                </div>
 
-ROYAL
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            text-white">
 
-</p>
+                    <h3 class="serif
+                               text-2xl
+                               font-bold">
 
-<h3 class="text-2xl
-           font-bold">
+                        Royal Palace
 
-Royal Palace
+                    </h3>
 
-</h3>
+                    <p class="text-sm">
+                        Regal celebrations
+                    </p>
 
-<p class="text-gray-200">
+                </div>
 
-Grand Indian celebrations
+            </div>
 
-</p>
 
-</div>
+            <!-- GARDEN -->
 
-</div>
+            <div class="destination-card
+                        relative
+                        h-80
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-xl">
 
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"
+                     class="w-full h-full object-cover"
+                     alt="Garden Wedding">
 
+                <div class="absolute inset-0
+                            bg-black/40">
+                </div>
 
-<!-- BEACH -->
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            text-white">
 
-<div class="destination-card
-            relative
-            h-96
-            rounded-3xl
-            overflow-hidden
-            shadow-xl">
+                    <h3 class="serif
+                               text-2xl
+                               font-bold">
 
-<img src="https://images.pexels.com/photos/36098374/pexels-photo-36098374.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                        Garden
 
-     class="w-full h-full
-            object-cover"
+                    </h3>
 
-     alt="Indian Wedding Couple">
+                    <p class="text-sm">
+                        Fresh & romantic
+                    </p>
 
+                </div>
 
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/85
-            via-black/20
-            to-transparent">
-</div>
+            </div>
 
 
-<div class="absolute
-            bottom-6
-            left-6
-            text-white">
+            <!-- MOUNTAIN -->
 
-<p class="text-yellow-300
-          text-sm
-          tracking-widest">
+            <div class="destination-card
+                        relative
+                        h-80
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-xl">
 
-BEACH
+                <img src="https://images.unsplash.com/photo-1533104816931-20fa691ff6ca?auto=format&fit=crop&w=900&q=85"
+                     class="w-full h-full object-cover"
+                     alt="Mountain Wedding">
 
-</p>
+                <div class="absolute inset-0
+                            bg-black/40">
+                </div>
 
-<h3 class="text-2xl
-           font-bold">
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            text-white">
 
-Beach Wedding
+                    <h3 class="serif
+                               text-2xl
+                               font-bold">
 
-</h3>
+                        Mountain
 
-<p class="text-gray-200">
+                    </h3>
 
-Celebrate by the sea
+                    <p class="text-sm">
+                        Magical landscapes
+                    </p>
 
-</p>
+                </div>
 
-</div>
+            </div>
 
-</div>
 
+            <!-- LUXURY -->
 
+            <div class="destination-card
+                        relative
+                        h-80
+                        rounded-2xl
+                        overflow-hidden
+                        shadow-xl">
 
-<!-- GARDEN -->
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85"
+                     class="w-full h-full object-cover"
+                     alt="Luxury Resort Wedding">
 
-<div class="destination-card
-            relative
-            h-96
-            rounded-3xl
-            overflow-hidden
-            shadow-xl">
+                <div class="absolute inset-0
+                            bg-black/40">
+                </div>
 
-<img src="https://images.pexels.com/photos/36523472/pexels-photo-36523472.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                <div class="absolute
+                            bottom-6
+                            left-6
+                            text-white">
 
-     class="w-full h-full
-            object-cover"
+                    <h3 class="serif
+                               text-2xl
+                               font-bold">
 
-     alt="Indian Bride Groom">
+                        Luxury Resorts
 
+                    </h3>
 
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/85
-            via-black/20
-            to-transparent">
-</div>
+                    <p class="text-sm">
+                        Premium celebrations
+                    </p>
 
+                </div>
 
-<div class="absolute
-            bottom-6
-            left-6
-            text-white">
+            </div>
 
-<p class="text-yellow-300
-          text-sm
-          tracking-widest">
+        </div>
 
-GARDEN
-
-</p>
-
-<h3 class="text-2xl
-           font-bold">
-
-Garden Wedding
-
-</h3>
-
-<p class="text-gray-200">
-
-Nature meets tradition
-
-</p>
-
-</div>
-
-</div>
-
-
-
-<!-- LUXURY -->
-
-<div class="destination-card
-            relative
-            h-96
-            rounded-3xl
-            overflow-hidden
-            shadow-xl">
-
-<img src="https://images.pexels.com/photos/31558008/pexels-photo-31558008.jpeg?auto=compress&cs=tinysrgb&w=1200"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Wedding Couple">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/85
-            via-black/20
-            to-transparent">
-</div>
-
-
-<div class="absolute
-            bottom-6
-            left-6
-            text-white">
-
-<p class="text-yellow-300
-          text-sm
-          tracking-widest">
-
-LUXURY
-
-</p>
-
-<h3 class="text-2xl
-           font-bold">
-
-Luxury Resorts
-
-</h3>
-
-<p class="text-gray-200">
-
-Celebrate in style
-
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -653,358 +654,139 @@ Celebrate in style
 
 <section id="moments"
          class="py-20
-                bg-[#fff0f0]">
+                bg-[#fff8f0]
+                px-6">
 
-<div class="max-w-7xl
-            mx-auto px-6">
+    <div class="max-w-7xl mx-auto">
 
+        <div class="text-center mb-12">
 
-<div class="text-center">
+            <p class="text-yellow-600
+                      font-semibold
+                      tracking-[3px]">
 
-<p class="text-[#a33a5e]
-          font-semibold
-          tracking-[4px]">
+                INDIAN WEDDING MOMENTS
 
-INDIAN WEDDING
+            </p>
 
-</p>
+            <h2 class="serif
+                       text-4xl md:text-5xl
+                       font-bold
+                       mt-3">
 
+                Celebrate Every Ritual
 
-<h2 class="text-4xl
-           md:text-5xl
-           font-bold
-           text-[#681b40]
-           mt-3">
+            </h2>
 
-Beautiful Wedding Moments
+            <div class="gold-line"></div>
 
-</h2>
+        </div>
 
 
-<p class="text-gray-600 mt-4">
+        <div class="grid
+                    sm:grid-cols-2
+                    lg:grid-cols-4
+                    gap-6">
 
-Every ritual has its own story.
 
-</p>
+            <?php
 
-</div>
+            $moments = [
 
+                [
+                    "Haldi",
+                    "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=85"
+                ],
 
+                [
+                    "Mehendi",
+                    "https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=85"
+                ],
 
-<div class="grid
-            grid-cols-2
-            md:grid-cols-3
-            lg:grid-cols-4
-            gap-5
-            mt-12">
+                [
+                    "Baraat",
+                    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=900&q=85"
+                ],
 
+                [
+                    "Bridal Entry",
+                    "https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=85"
+                ],
 
-<!-- HALDI -->
+                [
+                    "Jaimala",
+                    "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?auto=format&fit=crop&w=900&q=85"
+                ],
 
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
+                [
+                    "Wedding Ceremony",
+                    "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&w=900&q=85"
+                ],
 
-<img src="https://images.pexels.com/photos/32121489/pexels-photo-32121489.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                [
+                    "Maharashtrian Wedding",
+                    "https://images.pexels.com/photos/21008995/pexels-photo-21008995.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                ],
 
-     class="w-full h-full
-            object-cover"
+                [
+                    "Reception",
+                    "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=900&q=85"
+                ]
 
-     alt="Indian Wedding">
+            ];
 
 
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
+            foreach ($moments as $moment):
 
+            ?>
 
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
+                <div class="moment-card
+                            bg-white
+                            rounded-2xl
+                            overflow-hidden
+                            shadow-lg">
 
-🌼 Haldi
+                    <div class="h-60 overflow-hidden">
 
-</h3>
+                        <img src="<?= $moment[1] ?>"
+                             alt="<?= $moment[0] ?>"
+                             class="w-full h-full
+                                    object-cover
+                                    hover:scale-110
+                                    transition
+                                    duration-700">
 
-</div>
+                    </div>
 
+                    <div class="p-5">
 
+                        <h3 class="serif
+                                   text-2xl
+                                   font-bold">
 
-<!-- MEHENDI -->
+                            <?= $moment[0] ?>
 
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
+                        </h3>
 
-<img src="https://images.pexels.com/photos/27635271/pexels-photo-27635271.jpeg?auto=compress&cs=tinysrgb&w=1000"
+                        <p class="text-gray-500
+                                  text-sm
+                                  mt-2">
 
-     class="w-full h-full
-            object-cover"
+                            A beautiful moment
+                            of your celebration.
 
-     alt="Indian Wedding Couple">
+                        </p>
 
+                    </div>
 
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
+                </div>
 
+            <?php endforeach; ?>
 
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
 
-🌿 Mehendi
+        </div>
 
-</h3>
-
-</div>
-
-
-
-<!-- BARAAT -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/19780151/pexels-photo-19780151.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Wedding">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-🥁 Baraat
-
-</h3>
-
-</div>
-
-
-
-<!-- BRIDAL ENTRY -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/12200848/pexels-photo-12200848.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Bride Groom">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-👰 Bridal Entry
-
-</h3>
-
-</div>
-
-
-
-<!-- JAIMALA -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/30482896/pexels-photo-30482896.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Wedding Couple">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-💐 Jaimala
-
-</h3>
-
-</div>
-
-
-
-<!-- CEREMONY -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/20513773/pexels-photo-20513773.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Wedding Ceremony">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-🔥 Wedding Ceremony
-
-</h3>
-
-</div>
-
-
-
-<!-- MAHARASHTRIAN -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/36098389/pexels-photo-36098389.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Traditional Wedding">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-🪔 Maharashtrian Wedding
-
-</h3>
-
-</div>
-
-
-
-<!-- RECEPTION -->
-
-<div class="moment-card
-            relative
-            h-72
-            rounded-2xl
-            overflow-hidden">
-
-<img src="https://images.pexels.com/photos/33318112/pexels-photo-33318112.jpeg?auto=compress&cs=tinysrgb&w=1000"
-
-     class="w-full h-full
-            object-cover"
-
-     alt="Indian Wedding Reception">
-
-
-<div class="absolute inset-0
-            bg-gradient-to-t
-            from-black/80
-            to-transparent">
-</div>
-
-
-<h3 class="absolute
-           bottom-5
-           left-5
-           text-white
-           text-xl
-           font-bold">
-
-🎉 Reception
-
-</h3>
-
-</div>
-
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
@@ -1015,147 +797,153 @@ Every ritual has its own story.
 ===================================================== -->
 
 <section class="py-20
-                bg-[#4b102c]
-                text-white">
+                bg-white
+                px-6">
 
-<div class="max-w-7xl
-            mx-auto px-6">
+    <div class="max-w-7xl mx-auto">
 
+        <div class="text-center mb-14">
 
-<div class="text-center">
+            <p class="text-yellow-600
+                      font-semibold
+                      tracking-[3px]">
 
-<p class="text-yellow-300
-          tracking-[4px]">
+                WHY VIVAHVISTA
 
-WHY VIVAHVISTA
+            </p>
 
-</p>
+            <h2 class="serif
+                       text-4xl md:text-5xl
+                       font-bold
+                       mt-3">
 
-<h2 class="text-4xl
-           md:text-5xl
-           font-bold
-           mt-3">
+                Everything For Your Big Day
 
-Everything For Your Perfect Celebration
+            </h2>
 
-</h2>
+            <div class="gold-line"></div>
 
-</div>
-
-
-
-<div class="grid
-            md:grid-cols-4
-            gap-8
-            mt-14">
+        </div>
 
 
-<div class="text-center">
-
-<div class="text-5xl">
-❤️
-</div>
-
-<h3 class="text-xl
-           font-bold
-           mt-5">
-
-Trusted Planning
-
-</h3>
-
-<p class="text-gray-300
-          mt-3">
-
-Thoughtful planning
-for your special day.
-
-</p>
-
-</div>
+        <div class="grid
+                    md:grid-cols-4
+                    gap-8">
 
 
+            <div class="text-center p-7
+                        rounded-2xl
+                        bg-[#fff8f0]">
 
-<div class="text-center">
+                <div class="text-5xl mb-5">
+                    👑
+                </div>
 
-<div class="text-5xl">
-🏰
-</div>
+                <h3 class="serif
+                           text-xl
+                           font-bold">
 
-<h3 class="text-xl
-           font-bold
-           mt-5">
+                    Royal Venues
 
-Beautiful Venues
+                </h3>
 
-</h3>
+                <p class="text-gray-600
+                          text-sm mt-3">
 
-<p class="text-gray-300
-          mt-3">
+                    Discover elegant
+                    destinations for
+                    unforgettable celebrations.
 
-Royal palaces,
-beaches and resorts.
+                </p>
 
-</p>
-
-</div>
-
-
-
-<div class="text-center">
-
-<div class="text-5xl">
-✨
-</div>
-
-<h3 class="text-xl
-           font-bold
-           mt-5">
-
-Indian Traditions
-
-</h3>
-
-<p class="text-gray-300
-          mt-3">
-
-Celebrate every
-beautiful ritual.
-
-</p>
-
-</div>
+            </div>
 
 
+            <div class="text-center p-7
+                        rounded-2xl
+                        bg-[#fff8f0]">
 
-<div class="text-center">
+                <div class="text-5xl mb-5">
+                    💍
+                </div>
 
-<div class="text-5xl">
-📍
-</div>
+                <h3 class="serif
+                           text-xl
+                           font-bold">
 
-<h3 class="text-xl
-           font-bold
-           mt-5">
+                    Indian Traditions
 
-Destination Experts
+                </h3>
 
-</h3>
+                <p class="text-gray-600
+                          text-sm mt-3">
 
-<p class="text-gray-300
-          mt-3">
+                    Celebrate every
+                    beautiful Indian ritual
+                    with elegance.
 
-Find your perfect
-wedding destination.
+                </p>
 
-</p>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="text-center p-7
+                        rounded-2xl
+                        bg-[#fff8f0]">
 
-</div>
+                <div class="text-5xl mb-5">
+                    📸
+                </div>
+
+                <h3 class="serif
+                           text-xl
+                           font-bold">
+
+                    Beautiful Memories
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-sm mt-3">
+
+                    Create moments that
+                    stay beautiful forever.
+
+                </p>
+
+            </div>
+
+
+            <div class="text-center p-7
+                        rounded-2xl
+                        bg-[#fff8f0]">
+
+                <div class="text-5xl mb-5">
+                    ✨
+                </div>
+
+                <h3 class="serif
+                           text-xl
+                           font-bold">
+
+                    Premium Planning
+
+                </h3>
+
+                <p class="text-gray-600
+                          text-sm mt-3">
+
+                    From venue selection
+                    to celebration planning.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1167,185 +955,186 @@ wedding destination.
 
 <section id="packages"
          class="py-20
-                bg-[#fff8ed]">
+                bg-[#21160f]
+                text-white
+                px-6">
 
-<div class="max-w-6xl
-            mx-auto px-6">
+    <div class="max-w-7xl mx-auto">
 
+        <div class="text-center mb-14">
 
-<div class="text-center">
+            <p class="text-yellow-400
+                      font-semibold
+                      tracking-[3px]">
 
-<p class="text-[#a33a5e]
-          tracking-[4px]
-          font-semibold">
+                WEDDING EXPERIENCES
 
-WEDDING EXPERIENCES
+            </p>
 
-</p>
+            <h2 class="serif
+                       text-4xl md:text-5xl
+                       font-bold
+                       mt-3">
 
-<h2 class="text-4xl
-           md:text-5xl
-           font-bold
-           text-[#681b40]
-           mt-3">
+                Choose Your Celebration
 
-Choose Your Celebration
+            </h2>
 
-</h2>
+            <div class="gold-line"></div>
 
-</div>
-
-
-
-<div class="grid
-            md:grid-cols-3
-            gap-8
-            mt-14">
+        </div>
 
 
-<!-- CLASSIC -->
-
-<div class="package-card
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-xl
-            text-center">
-
-<div class="text-5xl">
-🌸
-</div>
-
-<h3 class="text-2xl
-           font-bold
-           text-[#681b40]
-           mt-5">
-
-Classic
-
-</h3>
-
-<p class="text-gray-600 mt-4">
-
-Elegant and intimate
-destination celebrations.
-
-</p>
-
-<a href="booking.php"
-   class="inline-block
-          mt-7
-          border-2
-          border-[#681b40]
-          text-[#681b40]
-          px-6 py-3
-          rounded-full
-          font-semibold">
-
-Enquire Now
-
-</a>
-
-</div>
+        <div class="grid
+                    md:grid-cols-3
+                    gap-8">
 
 
+            <div class="glass
+                        rounded-2xl
+                        p-8
+                        border border-white/10">
 
-<!-- ROYAL -->
+                <p class="text-yellow-400
+                          font-semibold">
 
-<div class="package-card
-            bg-[#681b40]
-            text-white
-            rounded-3xl
-            p-8
-            shadow-2xl
-            text-center
-            md:scale-105">
+                    INTIMATE
 
-<div class="text-5xl">
-👑
-</div>
+                </p>
 
-<h3 class="text-2xl
-           font-bold
-           mt-5">
+                <h3 class="serif
+                           text-3xl
+                           font-bold
+                           mt-3">
 
-Royal
+                    Traditional
 
-</h3>
+                </h3>
 
-<p class="text-gray-200 mt-4">
+                <p class="text-gray-300
+                          mt-4
+                          leading-7">
 
-A grand Indian
-destination wedding.
+                    Perfect for couples
+                    who want an elegant
+                    and intimate Indian
+                    wedding celebration.
 
-</p>
+                </p>
 
-<a href="booking.php"
-   class="inline-block
-          mt-7
-          bg-yellow-400
-          text-black
-          px-6 py-3
-          rounded-full
-          font-bold">
+                <a href="booking.php"
+                   class="inline-block
+                          mt-7
+                          border border-yellow-400
+                          text-yellow-400
+                          px-6 py-3
+                          rounded-full">
 
-Plan Now
+                    Enquire Now
 
-</a>
+                </a>
 
-</div>
-
-
-
-<!-- LUXURY -->
-
-<div class="package-card
-            bg-white
-            rounded-3xl
-            p-8
-            shadow-xl
-            text-center">
-
-<div class="text-5xl">
-💎
-</div>
-
-<h3 class="text-2xl
-           font-bold
-           text-[#681b40]
-           mt-5">
-
-Luxury
-
-</h3>
-
-<p class="text-gray-600 mt-4">
-
-A premium experience
-designed around you.
-
-</p>
-
-<a href="booking.php"
-   class="inline-block
-          mt-7
-          border-2
-          border-[#681b40]
-          text-[#681b40]
-          px-6 py-3
-          rounded-full
-          font-semibold">
-
-Enquire Now
-
-</a>
-
-</div>
+            </div>
 
 
-</div>
+            <div class="glass
+                        rounded-2xl
+                        p-8
+                        border border-yellow-400/50
+                        scale-105">
 
-</div>
+                <p class="text-yellow-400
+                          font-semibold">
+
+                    MOST POPULAR
+
+                </p>
+
+                <h3 class="serif
+                           text-3xl
+                           font-bold
+                           mt-3">
+
+                    Royal Celebration
+
+                </h3>
+
+                <p class="text-gray-300
+                          mt-4
+                          leading-7">
+
+                    A grand destination
+                    wedding experience
+                    inspired by India's
+                    royal traditions.
+
+                </p>
+
+                <a href="booking.php"
+                   class="inline-block
+                          mt-7
+                          bg-yellow-400
+                          text-black
+                          px-6 py-3
+                          rounded-full
+                          font-semibold">
+
+                    Plan This Wedding
+
+                </a>
+
+            </div>
+
+
+            <div class="glass
+                        rounded-2xl
+                        p-8
+                        border border-white/10">
+
+                <p class="text-yellow-400
+                          font-semibold">
+
+                    LUXURY
+
+                </p>
+
+                <h3 class="serif
+                           text-3xl
+                           font-bold
+                           mt-3">
+
+                    Grand Destination
+
+                </h3>
+
+                <p class="text-gray-300
+                          mt-4
+                          leading-7">
+
+                    A complete premium
+                    wedding experience
+                    at breathtaking
+                    destinations.
+
+                </p>
+
+                <a href="booking.php"
+                   class="inline-block
+                          mt-7
+                          border border-yellow-400
+                          text-yellow-400
+                          px-6 py-3
+                          rounded-full">
+
+                    Enquire Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
@@ -1357,354 +1146,68 @@ Enquire Now
 
 <section id="about"
          class="py-20
-                bg-[#fff0f0]">
+                bg-[#fff8f0]
+                px-6">
 
-<div class="max-w-4xl
-            mx-auto
-            px-6
-            text-center">
+    <div class="max-w-6xl mx-auto
+                grid md:grid-cols-2
+                gap-12
+                items-center">
 
 
-<p class="text-[#a33a5e]
-          tracking-[4px]
-          font-semibold">
+        <div>
 
-ABOUT VIVAHVISTA
+            <p class="text-yellow-600
+                      font-semibold
+                      tracking-[3px]">
 
-</p>
+                ABOUT VIVAHVISTA
 
+            </p>
 
-<h2 class="text-4xl
-           md:text-5xl
-           font-bold
-           text-[#681b40]
-           mt-3">
+            <h2 class="serif
+                       text-4xl md:text-5xl
+                       font-bold
+                       mt-4">
 
-Where Destinations Meet Forever
+                Your Celebration.
+                Your Tradition.
+                Your Story.
 
-</h2>
+            </h2>
 
+            <div class="gold-line
+                        !mx-0">
 
-<p class="text-gray-600
-          text-lg
-          leading-relaxed
-          mt-7">
+            </div>
 
-VIVAHVISTA is created for couples
-who want to celebrate their wedding
-with beautiful destinations,
-Indian traditions and unforgettable
-memories.
+            <p class="text-gray-600
+                      leading-8">
 
-</p>
+                VIVAHVISTA is created for
+                couples who dream of celebrating
+                their wedding somewhere truly
+                unforgettable.
 
+            </p>
 
-<p class="text-gray-600
-          text-lg
-          leading-relaxed
-          mt-4">
+            <p class="text-gray-600
+                      leading-8
+                      mt-4">
 
-From intimate ceremonies to grand
-destination celebrations, we help
-turn your wedding vision into
-a beautiful experience.
+                Whether you imagine a royal
+                palace, peaceful beach,
+                mountain escape or luxurious
+                resort, discover destinations
+                designed for beautiful Indian
+                wedding celebrations.
 
-</p>
+            </p>
 
+        </div>
 
-</div>
 
-</section>
-
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
-
-<section class="py-20
-                bg-[#7b1e1e]
-                text-white
-                text-center">
-
-<div class="max-w-4xl
-            mx-auto
-            px-6">
-
-
-<h2 class="text-4xl
-           md:text-6xl
-           font-bold">
-
-Let's Plan Your
-Perfect Day ❤️
-
-</h2>
-
-
-<p class="text-gray-200
-          text-lg
-          mt-6">
-
-Your destination.
-Your traditions.
-Your beautiful story.
-
-</p>
-
-
-<a href="booking.php"
-   class="inline-block
-          mt-8
-          bg-yellow-400
-          text-black
-          px-8 py-4
-          rounded-full
-          font-bold
-          text-lg
-          hover:bg-yellow-300">
-
-Start Planning →
-
-</a>
-
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer class="bg-[#250817]
-               text-white
-               py-12">
-
-<div class="max-w-7xl
-            mx-auto
-            px-6">
-
-
-<div class="grid
-            md:grid-cols-3
-            gap-10">
-
-
-<div>
-
-<h2 class="text-3xl
-           font-bold
-           text-yellow-300">
-
-VIVAHVISTA
-
-</h2>
-
-<p class="text-gray-400
-          mt-3">
-
-Where Destinations
-Meet Forever.
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<h3 class="font-bold
-           text-lg">
-
-Quick Links
-
-</h3>
-
-<div class="flex
-            flex-col
-            gap-2
-            mt-4
-            text-gray-400">
-
-<a href="#destinations">
-Destinations
-</a>
-
-<a href="#moments">
-Wedding Moments
-</a>
-
-<a href="#packages">
-Packages
-</a>
-
-<a href="contact.php">
-Contact
-</a>
-
-</div>
-
-</div>
-
-
-
-<div>
-
-<h3 class="font-bold
-           text-lg">
-
-Plan Your Wedding
-
-</h3>
-
-<p class="text-gray-400
-          mt-4">
-
-Let's create your
-dream celebration.
-
-</p>
-
-<a href="booking.php"
-   class="inline-block
-          mt-5
-          bg-yellow-400
-          text-black
-          px-6 py-2
-          rounded-full
-          font-semibold">
-
-Contact Us
-
-</a>
-
-</div>
-
-
-</div>
-
-
-
-<div class="border-t
-            border-white/10
-            mt-10
-            pt-6
-            text-center">
-
-<p class="text-gray-500">
-
-Made by Rytham ❤️
-
-</p>
-
-</div>
-
-
-</div>
-
-</footer>
-
-
-
-<!-- =====================================================
-     SLIDER JAVASCRIPT
-===================================================== -->
-
-<script>
-
-const slides = [
-
-"https://images.pexels.com/photos/36098389/pexels-photo-36098389.jpeg?auto=compress&cs=tinysrgb&w=2000",
-
-"https://images.pexels.com/photos/36098374/pexels-photo-36098374.jpeg?auto=compress&cs=tinysrgb&w=2000",
-
-"https://images.pexels.com/photos/36523472/pexels-photo-36523472.jpeg?auto=compress&cs=tinysrgb&w=2000",
-
-"https://images.pexels.com/photos/33318112/pexels-photo-33318112.jpeg?auto=compress&cs=tinysrgb&w=2000"
-
-];
-
-
-let currentSlide = 0;
-
-
-function changeSlide(index) {
-
-    currentSlide = index;
-
-    const image =
-        document.getElementById("heroImage");
-
-    image.style.opacity = "0";
-
-
-    setTimeout(function() {
-
-        image.src =
-            slides[currentSlide];
-
-        image.style.opacity = "1";
-
-    }, 300);
-
-
-    document
-        .querySelectorAll(".dot")
-        .forEach(function(dot, i) {
-
-            if (i === currentSlide) {
-
-                dot.classList.remove(
-                    "bg-white/50"
-                );
-
-                dot.classList.add(
-                    "bg-white"
-                );
-
-            } else {
-
-                dot.classList.remove(
-                    "bg-white"
-                );
-
-                dot.classList.add(
-                    "bg-white/50"
-                );
-
-            }
-
-        });
-
-}
-
-
-function nextSlide() {
-
-    currentSlide++;
-
-    if (currentSlide >= slides.length) {
-
-        currentSlide = 0;
-
-    }
-
-    changeSlide(currentSlide);
-
-}
-
-
-function previousSlide() {
-
-    currentSlide--;
-
-    if (currentSlide < 0) {
-
-        currentSlide =
+        <div class="rounded-3xl    currentSlide =
             slides.length - 1;
 
     }
@@ -1725,4 +1228,350 @@ setInterval(function() {
 
 </body>
 
+</html>
+                    overflow-hidden
+                    shadow-2xl">
+
+            <img src="https://images.pexels.com/photos/38961893/pexels-photo-38961893.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                 alt="Indian Wedding Couple"
+                 class="w-full
+                        h-[500px]
+                        object-cover">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="relative
+                py-24
+                overflow-hidden">
+
+    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=85"
+         class="absolute inset-0
+                w-full h-full
+                object-cover">
+
+    <div class="absolute inset-0
+                bg-black/65">
+    </div>
+
+
+    <div class="relative z-10
+                max-w-4xl
+                mx-auto
+                text-center
+                px-6
+                text-white">
+
+        <p class="text-yellow-400
+                  tracking-[4px]
+                  font-semibold">
+
+            YOUR DREAM WEDDING STARTS HERE
+
+        </p>
+
+        <h2 class="serif
+                   text-4xl md:text-6xl
+                   font-bold
+                   mt-4">
+
+            Let's Create
+            Something Beautiful
+
+        </h2>
+
+        <p class="text-gray-200
+                  mt-6
+                  text-lg">
+
+            Find your destination.
+            Celebrate your traditions.
+            Create memories forever.
+
+        </p>
+
+        <a href="booking.php"
+           class="inline-block
+                  mt-8
+                  bg-yellow-400
+                  text-black
+                  px-8 py-4
+                  rounded-full
+                  font-bold">
+
+            Start Planning →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="bg-black
+               text-white
+               py-10
+               px-6">
+
+    <div class="max-w-7xl
+                mx-auto
+                text-center">
+
+        <div class="serif
+                    text-3xl
+                    font-bold">
+
+            VIVAH<span class="text-yellow-400">
+                VISTA
+            </span>
+
+        </div>
+
+        <p class="text-gray-400
+                  mt-2">
+
+            Where Destinations Meet Forever
+
+        </p>
+
+
+        <div class="flex
+                    justify-center
+                    flex-wrap
+                    gap-6
+                    mt-6
+                    text-sm
+                    text-gray-400">
+
+            <a href="#home"
+               class="hover:text-yellow-400">
+                Home
+            </a>
+
+            <a href="#destinations"
+               class="hover:text-yellow-400">
+                Destinations
+            </a>
+
+            <a href="#moments"
+               class="hover:text-yellow-400">
+                Wedding Moments
+            </a>
+
+            <a href="#packages"
+               class="hover:text-yellow-400">
+                Packages
+            </a>
+
+            <a href="contact.php"
+               class="hover:text-yellow-400">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="border-t
+                    border-white/10
+                    mt-8
+                    pt-6">
+
+            <p class="text-gray-500
+                      text-sm">
+
+                © <?= date('Y') ?>
+                VIVAHVISTA.
+                All Rights Reserved.
+
+            </p>
+
+            <p class="text-yellow-400
+                      mt-2
+                      font-medium">
+
+                Made by Rytham ❤️
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     HERO SLIDER JAVASCRIPT
+===================================================== -->
+
+<script>
+
+const slides = [
+
+    "https://images.pexels.com/photos/21008995/pexels-photo-21008995.jpeg?auto=compress&cs=tinysrgb&w=2000",
+
+    "https://images.pexels.com/photos/38961893/pexels-photo-38961893.jpeg?auto=compress&cs=tinysrgb&w=2000",
+
+    "https://images.pexels.com/photos/37850754/pexels-photo-37850754.jpeg?auto=compress&cs=tinysrgb&w=2000",
+
+    "https://images.pexels.com/photos/28210869/pexels-photo-28210869.jpeg?auto=compress&cs=tinysrgb&w=2000"
+
+];
+
+
+let currentSlide = 0;
+
+
+const heroImage =
+    document.getElementById("heroImage");
+
+const dots =
+    document.querySelectorAll(".dot");
+
+
+function showSlide(index) {
+
+    currentSlide = index;
+
+    heroImage.style.opacity = "0";
+
+
+    setTimeout(() => {
+
+        heroImage.src =
+            slides[currentSlide];
+
+        heroImage.style.opacity = "1";
+
+    }, 300);
+
+
+    dots.forEach((dot, i) => {
+
+        if (i === currentSlide) {
+
+            dot.classList.remove(
+                "bg-white/50"
+            );
+
+            dot.classList.add(
+                "bg-white"
+            );
+
+        } else {
+
+            dot.classList.remove(
+                "bg-white"
+            );
+
+            dot.classList.add(
+                "bg-white/50"
+            );
+
+        }
+
+    });
+
+}
+
+
+function nextSlide() {
+
+    currentSlide =
+        (currentSlide + 1) %    currentSlide =
+            slides.length - 1;
+
+    }
+
+    changeSlide(currentSlide);
+
+}
+
+
+setInterval(function() {    currentSlide =
+            slides.length - 1;
+
+    }
+
+    changeSlide(currentSlide);
+
+}
+
+
+setInterval(function() {
+
+    nextSlide();
+
+}, 5000);
+
+</script>
+
+
+</body>
+
+</html>
+
+    nextSlide();
+
+}, 5000);
+
+</script>
+
+
+</body>
+
+</html>
+        slides.length;
+
+    showSlide(currentSlide);
+
+}
+
+
+function previousSlide() {
+
+    currentSlide =
+        (currentSlide - 1 +
+         slides.length) %
+        slides.length;
+
+    showSlide(currentSlide);
+
+}
+
+
+dots.forEach((dot, index) => {
+
+    dot.addEventListener(
+        "click",
+        () => showSlide(index)
+    );
+
+});
+
+
+setInterval(
+    nextSlide,
+    5000
+);
+
+</script>
+
+
+</body>
 </html>
