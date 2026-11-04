@@ -9,7 +9,7 @@ php
 </head>
 <body>
     
-    <h1>version 2.0.0</h1>
+    <h1>version 3.0.0</h1>
     <h1>PHP Application Successfully Deployed!</h1>
 
     <p>Jenkins + Nexus Production Deployment</p>
