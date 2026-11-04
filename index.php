@@ -1,4 +1,4 @@
-```php
+php
 <?php
 $version = "1.0.0";
 ?>
@@ -12,12 +12,9 @@ $version = "1.0.0";
 
     <h1>PHP Application Successfully Deployed!</h1>
 
-    <h2>Version: <?php echo $version; ?></h2>
-
     <p>Jenkins + Nexus Production Deployment</p>
 
     <p>Status: LIVE</p>
 
 </body>
 </html>
-```
