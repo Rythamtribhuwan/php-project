@@ -13,8 +13,3 @@ $version = "2.0.0";
     <h1>PHP Application Successfully Deployed!</h1>
 
     <p>Jenkins + Nexus Production Deployment</p>
-
-    <p>Status: LIVE</p>
-
-</body>
-</html>
